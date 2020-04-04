@@ -17,7 +17,10 @@ export default {
 
     // Enter page through transition
     enter(container, done) {
-      container.classList.add('container--ready');
+      setTimeout(() => {
+        container.classList.add('container--ready');
+      }, 100);
+
       setTimeout(() => {
         done();
       }, 300);
