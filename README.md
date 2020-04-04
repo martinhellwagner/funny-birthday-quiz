@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A funny quiz is fun, especially when played for a birthday. This one even has team assignment and effortless question selection baked in. Pretty neat, huh?
+A funny quiz is fun, especially when played for a birthday. This one even has clever team assignment and effortless question selection baked in. Pretty neat, huh?
 
 ## How to get stared
 
