@@ -2,7 +2,7 @@
 <template>
   <div class="container">
     <div class="description">
-      Hallo, ich bin eine Website.<br>
+      Hallo, ich bin eine Webseite.<br>
       Und du, Johanna, wirst heute 30 Jahre alt!<br>
       Wollen wir ein kleines Spiel spielen?
     </div>
