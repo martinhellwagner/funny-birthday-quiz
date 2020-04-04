@@ -2,7 +2,7 @@
 <template>
   <div class="container">
     <div class="description">
-      Fragen! Weiter zu den Ergebnissen?
+      Fragen! Weiter zu den Antworten?
     </div>
 
     <div class="buttons">
