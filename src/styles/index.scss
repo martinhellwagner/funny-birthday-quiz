@@ -1,0 +1,106 @@
+// VARIABLES
+$green: #23a127;
+$red: #dc3545;
+
+$breakpoint-min: 320;
+$breakpoint-small: 568;
+$breakpoint-medium: 768;
+$breakpoint-large: 992;
+$breakpoint-max: 1200;
+
+// MIXINS
+@mixin fluidSizes($property, $min, $max) {
+  #{$property}: #{$min + "px"};
+
+  @media screen and (min-width: #{$breakpoint-min + "px"}) {
+    #{$property}: calc(#{$min + "px"} + (#{$max} - #{$min}) * (100vw - #{$breakpoint-min + "px"}) / (#{$breakpoint-max} - #{$breakpoint-min}));
+  }
+
+  @media screen and (min-width: #{$breakpoint-max + "px"}) {
+    #{$property}: #{$max + "px"};
+  }
+}
+
+// STYLES
+body {
+  width: 100vw;
+  height: var(--windowHeight);
+  margin: 0;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: var(--windowHeight);
+  width: 100%;
+  opacity: 0;
+  transition: opacity 300ms linear; // Note that the same value needs to be set in Javascript
+
+  &--ready {
+    opacity: 1;
+  }
+}
+
+.description {
+  display: block;
+  width: 90vw;
+  max-width: 1200px;
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.button {
+  margin-top: 96px;
+  margin-left: 32px;
+  margin-right: 32px;
+  padding: 16px 20px;
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--green {
+    background-color: $green;
+    border-color: $green;
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+
+  &--red {
+    background-color: $red;
+    border-color: $red;
+    transition: opacity 300ms ease-in-out;
+
+    &:hover {
+      cursor: auto;
+      opacity: 0.5;
+    }
+  }
+}
+
+a,
+a:hover,
+a:visited {
+  color: black;
+  text-decoration: underline;
+
+  &.no-underline {
+    text-decoration: none;
+  }
+}
