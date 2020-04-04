@@ -3,7 +3,7 @@
   <div class="container">
     <!-- eslint-disable max-len -->
     <div class="description">
-      <b>Four-Oh-Four!</b>
+      <b>Sicha ned!</b><br>
       Tut mir leid, als moralisch korrekte Webseite kann ich Cheating leider nicht unterstützen.
       Deswegen musst du leider wieder von <router-link :to="{ name: 'home' }">vorne</router-link> anfangen.
     </div>

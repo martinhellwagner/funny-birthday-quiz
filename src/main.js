@@ -40,13 +40,13 @@ const router = new VueRouter({
       component: Questions,
     },
     {
-      path: '/404',
+      path: '/sicha-ned',
       name: 'four-oh-four',
       component: FourOhFour,
     },
     {
       path: '*',
-      redirect: '/404',
+      redirect: '/sicha-ned',
     },
   ],
 });
