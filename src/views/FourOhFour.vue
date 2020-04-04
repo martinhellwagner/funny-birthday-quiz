@@ -4,7 +4,7 @@
     <!-- eslint-disable max-len -->
     <div class="description">
       <b>Sicha ned!</b><br>
-      Tut mir leid, als moralisch korrekte Webseite kann ich Cheating leider nicht unterstützen.
+      Tut mir leid, als moralisch korrekte Webseite kann ich Cheating nicht unterstützen.
       Deswegen musst du leider wieder von <router-link :to="{ name: 'home' }">vorne</router-link> anfangen.
     </div>
     <!-- eslint-enable max-len -->
