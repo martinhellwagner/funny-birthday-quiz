@@ -4,8 +4,8 @@
     <!-- eslint-disable max-len -->
     <div class="description">
       <b>Four-Oh-Four!</b>
-      Hier geht es leider nicht weiter.
-      Aber du kannst immer zum Start <router-link :to="{ name: 'teams' }">zurück gehen</router-link>.
+      Tut mir leid, als moralisch korrekte Webseite kann ich Cheating leider nicht unterstützen.
+      Deswegen musst du leider wieder von <router-link :to="{ name: 'home' }">vorne</router-link> anfangen.
     </div>
     <!-- eslint-enable max-len -->
   </div>
