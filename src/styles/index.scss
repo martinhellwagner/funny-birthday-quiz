@@ -39,22 +39,72 @@ body {
   position: relative;
   min-height: var(--windowHeight);
   width: 100%;
-  opacity: 0;
-  transition: opacity 300ms linear; // Note that the same value needs to be set in Javascript
 
   &--ready {
     opacity: 1;
   }
 }
 
-.description {
-  display: block;
+.transition-enter-active,
+.transition-leave-active {
+  transition: opacity 300ms linear; // Note that the same value needs to be set in Javascript
+}
+
+.transition-enter,
+.transition-leave-to {
+  opacity: 0;
+}
+
+.attendees,
+.buttons,
+.description,
+.teams,
+.team {
+  text-align: center;
+}
+
+.attendees,
+.description,
+.teams,
+.team {
+  display: flex;
+  flex-direction: column;
+}
+
+.attendees,
+.description,
+.teams {
   width: 90vw;
   max-width: 1200px;
-  text-align: center;
   font-size: 36px;
   line-height: 1.6;
   font-weight: 500;
+}
+
+.attendees,
+.teams,
+.team {
+  flex-wrap: wrap;
+}
+
+.attendees {
+  height: calc(60px * var(--attendeesPerTeam));
+  justify-content: flex-start;
+}
+
+.teams {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.team {
+  flex: 1 1 0;
+}
+
+.attendee,
+.teamMember {
+  display: inherit;
+  justify-content: center;
 }
 
 .button {
@@ -102,5 +152,18 @@ a:visited {
 
   &.no-underline {
     text-decoration: none;
+  }
+}
+
+.input {
+  width: 60%;
+  padding: 16px;
+  font-size: 24px;
+  border-radius: 5px;
+  border: 1px solid black;
+  align-self: center;
+  
+  &:focus {
+    outline: none;
   }
 }
