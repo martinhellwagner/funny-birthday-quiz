@@ -21,7 +21,18 @@ $breakpoint-max: 1200;
   }
 }
 
-// STYLES
+// TRANSITIONS
+.transition-enter-active,
+.transition-leave-active {
+  transition: opacity 300ms linear; // Note that the same value needs to be set in Javascript
+}
+
+.transition-enter,
+.transition-leave-to {
+  opacity: 0;
+}
+
+// STYLES – GENERAL
 body {
   width: 100vw;
   height: var(--windowHeight);
@@ -45,66 +56,44 @@ body {
   }
 }
 
-.transition-enter-active,
-.transition-leave-active {
-  transition: opacity 300ms linear; // Note that the same value needs to be set in Javascript
+a,
+a:hover,
+a:visited {
+  color: black;
+  text-decoration: underline;
+
+  &.no-underline {
+    text-decoration: none;
+  }
 }
 
-.transition-enter,
-.transition-leave-to {
-  opacity: 0;
-}
-
-.attendees,
-.buttons,
-.description,
-.teams,
-.team {
-  text-align: center;
-}
-
-.attendees,
-.description,
-.teams,
-.team {
+.description {
   display: flex;
   flex-direction: column;
-}
-
-.attendees,
-.description,
-.teams {
+  flex-wrap: wrap;
   width: 90vw;
   max-width: 1200px;
+  text-align: center;
   font-size: 36px;
   line-height: 1.6;
   font-weight: 500;
 }
 
-.attendees,
-.teams,
-.team {
-  flex-wrap: wrap;
+.input {
+  width: 60%;
+  padding: 16px;
+  font-size: 24px;
+  border-radius: 5px;
+  border: 1px solid black;
+  align-self: center;
+  
+  &:focus {
+    outline: none;
+  }
 }
 
-.attendees {
-  height: calc(60px * var(--attendeesPerTeam));
-  justify-content: flex-start;
-}
-
-.teams {
-  flex-direction: row;
-  align-items: flex-start;
-}
-
-.team {
-  flex: 1 1 0;
-}
-
-.attendee,
-.teamMember {
-  display: inherit;
-  justify-content: center;
+.buttons {
+  text-align: center;
 }
 
 .button {
@@ -125,6 +114,14 @@ body {
   &--green {
     background-color: $green;
     border-color: $green;
+  }
+
+  &--red {
+    background-color: $red;
+    border-color: $red;
+  }
+
+  &--rotate {
     transition: transform 1s ease-in-out;
 
     &:hover {
@@ -132,9 +129,7 @@ body {
     }
   }
 
-  &--red {
-    background-color: $red;
-    border-color: $red;
+  &--disable {
     transition: opacity 300ms ease-in-out;
 
     &:hover {
@@ -144,26 +139,25 @@ body {
   }
 }
 
-a,
-a:hover,
-a:visited {
-  color: black;
-  text-decoration: underline;
-
-  &.no-underline {
-    text-decoration: none;
-  }
+// STYLES – COMPONENTS
+.attendees {
+  height: calc(60px * var(--attendeesPerTeam));
+  justify-content: flex-start;
 }
 
-.input {
-  width: 60%;
-  padding: 16px;
-  font-size: 24px;
-  border-radius: 5px;
-  border: 1px solid black;
-  align-self: center;
-  
-  &:focus {
-    outline: none;
-  }
+.teams {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.team {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.attendee,
+.teamMember {
+  display: inherit;
+  justify-content: center;
 }

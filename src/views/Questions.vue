@@ -1,15 +1,21 @@
 <!-- TEMPLATE -->
 <template>
   <div class="container">
-    <div class="description">
-      Fragen! Weiter zu den Antworten?
-    </div>
+    <!-- eslint-disable max-len -->
+    <transition name="transition" mode="out-in">
+      <div :key="questionIndex">
+        <div class="question description">
+          {{ question }}
+        </div>
 
-    <div class="buttons">
-      <!-- eslint-disable-next-line max-len -->
-      <router-link :to="{ name: 'answers' }"><button class="button button--green">Wenns sein muss.</button></router-link>
-      <button class="button button--red">Please kill me now.</button>
-    </div>
+        <div class="buttons">
+          <button class="button button--green" @click="goToNextQuestion" v-if="questionIndex < numberOfQuestions">Weiter zur nächsten Frage</button>
+          <router-link :to="{ name: 'answers' }" v-if="questionIndex == numberOfQuestions"><button class="button button--green">Antworten, hop hop hop!</button></router-link>
+          <button class="button button--red" v-if="questionIndex == numberOfQuestions">Please kill me now.</button>
+        </div>
+      </div>
+    </transition>
+    <!-- eslint-enable max-len -->
   </div>
 </template>
 
@@ -20,6 +26,25 @@ export default {
 
   mounted() {
     this.init();
+  },
+
+  computed: {
+    question() {
+      return this.$root.$store.state.quizPool[this.questionIndex - 1].question;
+    },
+  },
+
+  data() {
+    return {
+      numberOfQuestions: this.$root.$store.state.quizPool.length,
+      questionIndex: 1,
+    };
+  },
+
+  methods: {
+    goToNextQuestion() {
+      this.questionIndex += 1;
+    },
   },
 };
 </script>

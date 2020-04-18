@@ -4,8 +4,8 @@
     <!-- eslint-disable max-len -->
     <transition name="transition" mode="out-in">
       <div key="step1" v-if="step === 1">
-        <div class="attendees">
-          <div class="attendee" v-for="attendee in attendees" :key="attendee">
+        <div class="attendees description">
+          <div class="attendee" v-for="(attendee, index) in attendees" :key="index">
             {{ attendee }}
           </div>
         </div>
@@ -25,8 +25,8 @@
       </div>
 
       <div key="step3" v-if="step === 3">
-        <div class="teams">
-          <div class="team" v-for="(team, index) in teams" :key="index">
+        <div class="teams description">
+          <div class="team description" v-for="(team, index) in teams" :key="index">
             <input type="text" class="input">
             <p><b>Team {{ index + 1 }}</b></p>
             <div class="teamMember" v-for="(teamMember, index) in team.members" :key="index">
@@ -50,8 +50,8 @@
       </div>
 
       <div key="step5" v-if="step === 5">
-        <div class="teams">
-          <div class="team" v-for="(team, index) in teams" :key="index">
+        <div class="teams description">
+          <div class="team description" v-for="(team, index) in teams" :key="index">
             <p><b>{{ team.name }} </b></p>
             <div class="teamMember" v-for="(teamMember, index) in team.members" :key="index">
               {{ teamMember }}

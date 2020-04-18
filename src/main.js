@@ -10,6 +10,7 @@ import Answers from './views/Answers.vue';
 import FourOhFour from './views/FourOhFour.vue';
 import Home from './views/Home.vue';
 import Questions from './views/Questions.vue';
+import Results from './views/Results.vue';
 import Teams from './views/Teams.vue';
 
 Vue.config.productionTip = false;
@@ -33,9 +34,9 @@ const router = new VueRouter({
       component: Answers,
     },
     {
-      path: '/teams',
-      name: 'teams',
-      component: Teams,
+      path: '/sicha-ned',
+      name: 'four-oh-four',
+      component: FourOhFour,
     },
     {
       path: '/fragen',
@@ -43,9 +44,14 @@ const router = new VueRouter({
       component: Questions,
     },
     {
-      path: '/sicha-ned',
-      name: 'four-oh-four',
-      component: FourOhFour,
+      path: '/ergebnisse',
+      name: 'results',
+      component: Results,
+    },
+    {
+      path: '/teams',
+      name: 'teams',
+      component: Teams,
     },
     {
       path: '*',
@@ -76,6 +82,29 @@ const store = new Vuex.Store({
 
     teams: [
       // Empty at the beginning
+    ],
+
+    quizPool: [
+      {
+        question: 'Wie viele Haare hat Johanna am Kopf?',
+        answer: '1 Milliarde',
+      },
+      {
+        question: 'Welchen Buchstaben hatte Johannas Oberstufen-Klasse?',
+        answer: 'A',
+      },
+      {
+        question: 'Mit welchem Unternehmen hat Johanna ihre Maturareise gebucht?',
+        answer: 'Mission2beach',
+      },
+      {
+        question: 'Welche Adresse hatten Johanna und Phillipp in Enschede?',
+        answer: 'Tollenstraat 5',
+      },
+      {
+        question: 'In welcher Stadt in Mexiko hat Johanna ihr Auslandssemester gemacht?',
+        answer: 'Guadalajara',
+      },
     ],
   },
 
