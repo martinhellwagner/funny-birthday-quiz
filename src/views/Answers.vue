@@ -5,13 +5,14 @@
     <transition name="transition" mode="out-in">
       <div :key="answerIndex">
         <div class="answer description">
-          {{ answer }}
+          <p><b>Antwort {{ answerIndex }}</b></p>
+          <span>{{ answer }}</span>
         </div>
 
         <div class="buttons">
-          <button class="button button--green" @click="goToNextAnswer" v-if="answerIndex < numberOfAnswers">Weiter zur nächsten Antwort</button>
-          <router-link :to="{ name: 'results' }" v-if="answerIndex == numberOfAnswers"><button class="button button--green">Ergebnisse bitte!</button></router-link>
-          <button class="button button--red" v-if="answerIndex == numberOfAnswers">Ich brauch noch ein Bier.</button>
+          <button class="button button--green button--scaleSmall" @click="goToNextAnswer" v-if="answerIndex < numberOfAnswers">Weiter zur nächsten Antwort</button>
+          <router-link :to="{ name: 'results' }" v-if="answerIndex == numberOfAnswers"><button class="button button--green button--rotateCounterClockwise">Ergebnisse bitte!</button></router-link>
+          <button class="button button--red button--moveAwayRight" v-if="answerIndex == numberOfAnswers">Ich brauch noch ein Bier.</button>
         </div>
       </div>
     </transition>

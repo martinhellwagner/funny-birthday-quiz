@@ -133,23 +133,172 @@ a:visited {
   &--red {
     background-color: $red;
     border-color: $red;
-  }
-
-  &--rotate {
-    transition: transform 1s ease-in-out;
-
-    &:hover {
-      transform: rotate(360deg);
-    }
+    cursor: auto;
   }
 
   &--disable {
-    transition: opacity 300ms ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 
     &:hover {
-      cursor: auto;
       opacity: 0.5;
     }
+  }
+
+  &--disappear {
+    &:hover {
+      opacity: 0;
+    }
+  }
+
+  &--jumpHorizontal {
+    &:hover {
+      animation: jumpHorizontal 0.5s ease-in-out forwards;
+      animation-delay: 0.1s;
+    }
+  }
+
+  &--jumpVertical {
+    &:hover {
+      animation: jumpVertical 0.5s ease-in-out forwards;
+      animation-delay: 0.1s;
+    }
+  }
+
+  &--moveAwayLeft {
+    &:hover {
+      animation: moveAwayLeft 0.5s ease-in-out forwards;
+      animation-delay: 0.2s;
+    }
+  }
+
+  &--moveAwayRight {
+    &:hover {
+      animation: moveAwayRight 0.5s ease-in-out forwards;
+      animation-delay: 0.2s;
+    }
+  }
+
+  &--rotateClockwise {
+    &:hover {
+      animation: rotateClockwise 1s ease-in-out forwards;
+    }
+  }
+
+  &--rotateCounterClockwise {
+    &:hover {
+      animation: rotateCounterClockwise 1s ease-in-out forwards;
+    }
+  }
+
+  &--scaleSmall {
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &--scaleBig {
+    transition: transform 1s ease-in-out;
+
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+
+  &--skew {
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: skew(-20deg);
+    }
+  }
+}
+
+// STYLES – ANIMATIONS
+@keyframes jumpHorizontal {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-20px);
+  }
+
+  75% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes jumpVertical {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-20px);
+  }
+
+  75% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveAwayLeft {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+
+@keyframes moveAwayRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes rotateClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes rotateCounterClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-180deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
   }
 }
 

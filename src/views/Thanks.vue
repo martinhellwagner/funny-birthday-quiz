@@ -7,14 +7,14 @@
       </div>
 
       <p>
-        Danke fürs Mitmachen!<br>
+        <b>Danke fürs Mitmachen!</b><br>
         Ihr wart großartig!
       </p>
     </div>
 
     <div class="buttons">
       <!-- eslint-disable-next-line max-len -->
-      <router-link :to="{ name: 'home' }"><button class="button button--green">Back home please.</button></router-link>
+      <router-link :to="{ name: 'home' }"><button class="button button--green button--moveAwayLeft">Back home please.</button></router-link>
     </div>
   </div>
 </template>

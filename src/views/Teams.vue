@@ -11,7 +11,7 @@
         </div>
 
         <div class="buttons">
-          <button class="button button--green" @click="createTeams">Teams! Machen!</button>
+          <button class="button button--green button--jumpHorizontal" @click="createTeams">Teams! Machen!</button>
         </div>
       </div>
 
@@ -36,7 +36,7 @@
         </div>
 
         <div class="buttons">
-          <button class="button button--green" @click="nameTeams">Gib uns Namen!</button>
+          <button class="button button--green button--jumpHorizontal" @click="nameTeams">Gib uns Namen!</button>
         </div>
       </div>
 
@@ -60,8 +60,8 @@
         </div>
 
         <div class="buttons">
-          <router-link :to="{ name: 'questions' }"><button class="button button--green">Ich will endlich Fragen!</button></router-link>
-          <button class="button button--red">Der Scheiß is fad!</button>
+          <router-link :to="{ name: 'questions' }"><button class="button button--green button--skew">Ich will endlich Fragen!</button></router-link>
+          <button class="button button--red button--disappear">Der Scheiß is fad!</button>
         </div>
       </div>
     </transition>

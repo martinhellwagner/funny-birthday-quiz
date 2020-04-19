@@ -11,8 +11,8 @@
 
     <div class="buttons">
       <!-- eslint-disable-next-line max-len -->
-      <router-link :to="{ name: 'teams' }"><button class="button button--green">Ja, unbedingt!</button></router-link>
-      <button class="button button--red">Na, schleich di!</button>
+      <router-link :to="{ name: 'teams' }"><button class="button button--green button--rotateClockwise">Ja, unbedingt!</button></router-link>
+      <button class="button button--red button--disable">Na, schleich di!</button>
     </div>
   </div>
 </template>

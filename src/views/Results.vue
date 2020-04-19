@@ -13,7 +13,7 @@
           </div>
 
           <div class="buttons">
-            <button class="button button--green" @click="determineWinners">And the winner is...</button>
+            <button class="button button--green button--scaleBig" @click="determineWinners">And the winner is...</button>
           </div>
         </div>
 
@@ -45,8 +45,8 @@
           </div>
 
           <div class="buttons">
-            <router-link :to="{ name: 'thanks' }"><button class="button button--green">Das war toll!</button></router-link>
-            <router-link :to="{ name: 'thanks' }"><button class="button button--red">Endlich aus!</button></router-link>
+            <router-link :to="{ name: 'thanks' }"><button class="button button--green button--jumpHorizontal">Das war toll!</button></router-link>
+            <router-link :to="{ name: 'thanks' }"><button class="button button--red button button--jumpVertical">Endlich aus!</button></router-link>
           </div>
         </div>
       </transition>
@@ -106,7 +106,7 @@ export default {
 
         setTimeout(() => {
           this.step = 3;
-        }, 2000);
+        }, 1700);
       }
     },
   },
