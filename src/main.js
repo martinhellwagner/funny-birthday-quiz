@@ -12,6 +12,7 @@ import Home from './views/Home.vue';
 import Questions from './views/Questions.vue';
 import Results from './views/Results.vue';
 import Teams from './views/Teams.vue';
+import Thanks from './views/Thanks.vue';
 
 Vue.config.productionTip = false;
 
@@ -54,6 +55,11 @@ const router = new VueRouter({
       component: Teams,
     },
     {
+      path: '/danke',
+      name: 'thanks',
+      component: Thanks,
+    },
+    {
       path: '*',
       redirect: '/sicha-ned',
     },
@@ -84,6 +90,10 @@ const store = new Vuex.Store({
       // Empty at the beginning
     ],
 
+    winningTeams: [
+      // Empty at the beginning
+    ],
+
     quizPool: [
       {
         question: 'Wie viele Haare hat Johanna am Kopf?',
@@ -106,68 +116,6 @@ const store = new Vuex.Store({
         answer: 'Guadalajara',
       },
     ],
-  },
-
-  mutations: {
-    createTeams(state) {
-      const attendees = [...state.attendees];
-      let attendeesCopy = [...state.attendees];
-      const numberOfAttendeesPerTeam = Math.ceil(attendees.length / state.numberOfTeams);
-
-      // Shuffle attendees
-      let currentIndex = attendees.length;
-      let temporaryValue;
-      let randomIndex;
-
-      while (currentIndex !== 0) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-
-        temporaryValue = attendees[currentIndex];
-        attendees[currentIndex] = attendees[randomIndex];
-        attendees[randomIndex] = temporaryValue;
-      }
-
-      attendeesCopy = [...attendees];
-
-      // Put shuffled attendees into teams
-      for (let i = 0; i < state.numberOfTeams; i += 1) {
-        const attendee = attendees.splice(0, numberOfAttendeesPerTeam);
-
-        state.teams[i] = {};
-        state.teams[i].members = attendee;
-      }
-
-      // Distribute members evenly across teams
-      const lastTeam = state.teams[state.numberOfTeams - 1];
-      let teamIndex = 0;
-
-      while (lastTeam.members.length < Math.floor(state.attendees.length / state.numberOfTeams)) {
-        const memberOfRandomTeam = state.teams[teamIndex].members.pop();
-        lastTeam.members.push(memberOfRandomTeam);
-        teamIndex += 1;
-      }
-
-      state.attendees = [...attendeesCopy];
-    },
-
-    nameTeams(state) {
-      const inputs = document.querySelectorAll('input');
-
-      for (let i = 0; i < state.numberOfTeams; i += 1) {
-        state.teams[i].name = inputs[i].value;
-      }
-    },
-  },
-
-  actions: {
-    createTeams(context) {
-      context.commit('createTeams');
-    },
-
-    nameTeams(context) {
-      context.commit('nameTeams');
-    },
   },
 });
 

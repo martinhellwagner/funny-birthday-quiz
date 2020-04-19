@@ -71,12 +71,21 @@ a:visited {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 90vw;
+  width: 80vw;
   max-width: 1200px;
   text-align: center;
   font-size: 36px;
   line-height: 1.6;
   font-weight: 500;
+
+  &--smallSize {
+    max-width: 800px;
+  }
+
+  &--largeFont {
+    font-size: 48px;
+    line-height: 2;
+  }
 }
 
 .input {
@@ -84,11 +93,16 @@ a:visited {
   padding: 16px;
   font-size: 24px;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 2px solid black;
   align-self: center;
+  transition: border 300ms ease-in-out;
   
   &:focus {
     outline: none;
+  }
+
+  &.error {
+    border: 2px solid $red;
   }
 }
 
@@ -148,6 +162,10 @@ a:visited {
 .teams {
   flex-direction: row;
   align-items: flex-start;
+
+  &--bottom {
+    align-items: flex-end;
+  }
 }
 
 .team {
@@ -160,4 +178,8 @@ a:visited {
 .teamMember {
   display: inherit;
   justify-content: center;
+}
+
+.winningTeam {
+  margin-top: 48px;
 }

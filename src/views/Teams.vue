@@ -100,8 +100,49 @@ export default {
 
   methods: {
     createTeams() {
+      const attendees = [...this.$root.$store.state.attendees];
+      let attendeesCopy = [...this.$root.$store.state.attendees];
+      // eslint-disable-next-line max-len
+      const numberOfAttendeesPerTeam = Math.ceil(attendees.length / this.$root.$store.state.numberOfTeams);
+
+      // Shuffle attendees
+      let currentIndex = attendees.length;
+      let temporaryValue;
+      let randomIndex;
+
+      while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        temporaryValue = attendees[currentIndex];
+        attendees[currentIndex] = attendees[randomIndex];
+        attendees[randomIndex] = temporaryValue;
+      }
+
+      attendeesCopy = [...attendees];
+
+      // Put shuffled attendees into teams
+      for (let i = 0; i < this.$root.$store.state.numberOfTeams; i += 1) {
+        const attendee = attendees.splice(0, numberOfAttendeesPerTeam);
+
+        this.$root.$store.state.teams[i] = {};
+        this.$root.$store.state.teams[i].members = attendee;
+      }
+
+      // Distribute members evenly across teams
+      const lastTeam = this.$root.$store.state.teams[this.$root.$store.state.numberOfTeams - 1];
+      let teamIndex = 0;
+
+      // eslint-disable-next-line max-len
+      while (lastTeam.members.length < Math.floor(this.$root.$store.state.attendees.length / this.$root.$store.state.numberOfTeams)) {
+        const memberOfRandomTeam = this.$root.$store.state.teams[teamIndex].members.pop();
+        lastTeam.members.push(memberOfRandomTeam);
+        teamIndex += 1;
+      }
+
+      this.$root.$store.state.attendees = [...attendeesCopy];
+
       this.step = 2;
-      this.$root.$store.dispatch('createTeams');
 
       setTimeout(() => {
         this.step = 3;
@@ -109,12 +150,29 @@ export default {
     },
 
     nameTeams() {
-      this.step = 4;
-      this.$root.$store.dispatch('nameTeams');
+      const inputs = document.querySelectorAll('.input');
+      let error = false;
 
-      setTimeout(() => {
-        this.step = 5;
-      }, 2000);
+      for (let i = 0; i < inputs.length; i += 1) {
+        inputs[i].addEventListener('click', () => {
+          inputs[i].classList.remove('error');
+        });
+
+        if (inputs[i].value === '') {
+          inputs[i].classList.add('error');
+          error = true;
+        } else {
+          this.$root.$store.state.teams[i].name = inputs[i].value;
+        }
+      }
+
+      if (!error) {
+        this.step = 4;
+
+        setTimeout(() => {
+          this.step = 5;
+        }, 2000);
+      }
     },
   },
 };

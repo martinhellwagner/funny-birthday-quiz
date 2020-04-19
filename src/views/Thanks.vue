@@ -2,17 +2,19 @@
 <template>
   <div class="container">
     <div class="description">
+      <div>
+        <img src="../images/thanking.png">
+      </div>
+
       <p>
-        Hallo, ich bin eine Webseite.<br>
-        Und du, Johanna, wirst heute 30 Jahre alt!<br>
-        Wollen wir ein kleines Spiel spielen?
+        Danke fürs Mitmachen!<br>
+        Ihr wart großartig!
       </p>
     </div>
 
     <div class="buttons">
       <!-- eslint-disable-next-line max-len -->
-      <router-link :to="{ name: 'teams' }"><button class="button button--green">Ja, unbedingt!</button></router-link>
-      <button class="button button--red">Na, schleich di!</button>
+      <router-link :to="{ name: 'home' }"><button class="button button--green">Back home please.</button></router-link>
     </div>
   </div>
 </template>
@@ -20,10 +22,13 @@
 <!-- SCRIPT -->
 <script>
 export default {
-  name: 'Home',
+  name: 'Thanks',
 
   mounted() {
     this.init();
+
+    this.$root.$store.state.teams = [];
+    this.$root.$store.state.winningTeams = [];
   },
 };
 </script>
