@@ -96,8 +96,12 @@ const store = new Vuex.Store({
 
     quizPool: [
       {
-        question: 'Wie viele Haare hat Johanna am Kopf?',
-        answer: '1 Milliarde',
+        question: 'Aus welchen beiden Tieren schuf Johanna ein neues Wort, das bis dato unbekannt, aber entzückend war?',
+        answer: 'Aus Katze und Zebra entstand "zebra cat", es war der Tiger.',
+      },
+      {
+        question: 'In welchen Städten war Johanna mit a) drei bzw. vier Jahren, b) mit 13 Jahren, c) mit 20 Jahren, d) mit 24 Jahren?',
+        answer: 'a) Kansas City, Debrecen, b) Belo Horizonte, c) Guadalajara, d) NYC, San Francisco, Mendocino, Oxnard, Los Angeles, Henderson, Las Vegas',
       },
       {
         question: 'Welchen Buchstaben hatte Johannas Oberstufen-Klasse?',
@@ -108,12 +112,20 @@ const store = new Vuex.Store({
         answer: 'Mission2beach',
       },
       {
-        question: 'Welche Adresse hatten Johanna und Phillipp in Enschede?',
-        answer: 'Tollenstraat 5',
+        question: 'a) Was war Hildes Geschenk zu Johannas Matura, das den ganzen Tag versteckt war? b) Aus welcher Stadt kam es? c) Warum war Hilde an diesem Tag nicht zu Hause? d) Wo war sie?',
+        answer: 'a) Ohrringe, b) Las Vegas, c) Fortbildung mit den Schuldirektorinnen und -inspektorinnen in NÖ, d) Mistelbach',
       },
       {
         question: 'In welcher Stadt in Mexiko hat Johanna ihr Auslandssemester gemacht?',
         answer: 'Guadalajara',
+      },
+      {
+        question: 'Welche zwei Professorinnen wollten, dass Johanna ihre Diplomarbeit bei ihnen schreibt?',
+        answer: 'Sabine Schmölzer-Eibinger und Petra Ernst-Kühr',
+      },
+      {
+        question: 'Welche Adresse hatten Johanna und Phillipp in Enschede?',
+        answer: 'Tollenstraat 5',
       },
     ],
   },
