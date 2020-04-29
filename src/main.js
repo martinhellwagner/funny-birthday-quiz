@@ -98,34 +98,42 @@ const store = new Vuex.Store({
       {
         question: 'Aus welchen beiden Tieren schuf Johanna ein neues Wort, das bis dato unbekannt, aber entzückend war?',
         answer: 'Aus Katze und Zebra entstand "zebra cat", es war der Tiger.',
+        points: 1,
       },
       {
         question: 'In welchen Städten war Johanna mit a) drei bzw. vier Jahren, b) mit 13 Jahren, c) mit 20 Jahren, d) mit 24 Jahren?',
         answer: 'a) Kansas City, Debrecen, b) Belo Horizonte, c) Guadalajara, d) NYC, San Francisco, Mendocino, Oxnard, Los Angeles, Henderson, Las Vegas',
+        points: 4,
       },
       {
         question: 'Welchen Buchstaben hatte Johannas Oberstufen-Klasse?',
         answer: 'A',
+        points: 1,
       },
       {
         question: 'Mit welchem Unternehmen hat Johanna ihre Maturareise gebucht?',
         answer: 'Mission2beach',
+        points: 1,
       },
       {
         question: 'a) Was war Hildes Geschenk zu Johannas Matura, das den ganzen Tag versteckt war? b) Aus welcher Stadt kam es? c) Warum war Hilde an diesem Tag nicht zu Hause? d) Wo war sie?',
         answer: 'a) Ohrringe, b) Las Vegas, c) Fortbildung mit den Schuldirektorinnen und -inspektorinnen in NÖ, d) Mistelbach',
+        points: 4,
       },
       {
         question: 'In welcher Stadt in Mexiko hat Johanna ihr Auslandssemester gemacht?',
         answer: 'Guadalajara',
+        points: 1,
       },
       {
         question: 'Welche zwei Professorinnen wollten, dass Johanna ihre Diplomarbeit bei ihnen schreibt?',
         answer: 'Sabine Schmölzer-Eibinger und Petra Ernst-Kühr',
+        points: 2,
       },
       {
         question: 'Welche Adresse hatten Johanna und Phillipp in Enschede?',
         answer: 'Tollenstraat 5',
+        points: 1,
       },
     ],
   },

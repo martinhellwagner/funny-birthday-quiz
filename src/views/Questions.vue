@@ -5,7 +5,10 @@
     <transition name="transition" mode="out-in">
       <div :key="questionIndex">
         <div class="question description">
-          <p><b>Frage {{ questionIndex }}</b></p>
+          <p>
+            <b>Frage {{ questionIndex }}</b><br>
+            ({{ points }})
+          </p>
           <span>{{ question }}</span>
         </div>
 
@@ -32,6 +35,16 @@ export default {
   computed: {
     question() {
       return this.$root.$store.state.quizPool[this.questionIndex - 1].question;
+    },
+
+    points() {
+      const numberOfPoints = this.$root.$store.state.quizPool[this.questionIndex - 1].points;
+
+      if (numberOfPoints === 1) {
+        return `${numberOfPoints} Punkt`;
+      }
+
+      return `${numberOfPoints} Punkte`;
     },
   },
 
