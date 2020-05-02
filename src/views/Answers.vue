@@ -9,7 +9,10 @@
             <b>Antwort {{ answerIndex }}</b><br>
             ({{ points }})
           </p>
-          <span>{{ answer }}</span>
+          <span v-html="answer"></span>
+          <div v-if="image !== undefined">
+            <img :src="require(`../images/quizPool/${image}`)">
+          </div>
         </div>
 
         <div class="buttons">
@@ -35,6 +38,10 @@ export default {
   computed: {
     answer() {
       return this.$root.$store.state.quizPool[this.answerIndex - 1].answer;
+    },
+
+    image() {
+      return this.$root.$store.state.quizPool[this.answerIndex - 1].image;
     },
 
     points() {

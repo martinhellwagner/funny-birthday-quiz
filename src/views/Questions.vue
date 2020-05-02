@@ -9,7 +9,7 @@
             <b>Frage {{ questionIndex }}</b><br>
             ({{ points }})
           </p>
-          <span>{{ question }}</span>
+          <span v-html="question"></span>
         </div>
 
         <div class="buttons">
