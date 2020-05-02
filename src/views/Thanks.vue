@@ -3,7 +3,7 @@
   <div class="container">
     <div class="description">
       <div>
-        <img src="../images/thanking.png">
+        <img src="../images/system/thanking.png">
       </div>
 
       <p>

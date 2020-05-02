@@ -21,7 +21,7 @@
           <div class="description">
             <span>Spannung, Spannung!</span><br>
             <div>
-              <img src="../images/winning.gif">
+              <img src="../images/system/winning.gif">
             </div>
           </div>
         </div>
@@ -29,7 +29,7 @@
         <div key="step3" v-if="step === 3">
           <div class="winningTeams description">
             <div>
-              <img src="../images/partying.png">
+              <img src="../images/system/partying.png">
             </div>
 
             <div class="winningTeam" v-for="(winningTeam, index) in winningTeams" :key="index">

@@ -19,7 +19,7 @@
         <div class="description">
           <span>Every day I'm shuffling...</span><br>
           <div>
-            <img src="../images/shuffling.gif">
+            <img src="../images/system/shuffling.gif">
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@
         <div class="description">
           <span>Ich verinnerliche die Namen...</span><br>
           <div>
-            <img src="../images/writing.gif">
+            <img src="../images/system/writing.gif">
           </div>
         </div>
       </div>
