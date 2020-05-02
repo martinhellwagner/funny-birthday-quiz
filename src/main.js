@@ -98,7 +98,7 @@ const store = new Vuex.Store({
       {
         question: 'Aus welchen beiden Tieren schuf Johanna ein neues Wort, das bis dato unbekannt, aber entzückend war?',
         answer: 'Aus Katze und Zebra entstand "zebra cat", es war der Tiger.',
-        points: 1,
+        points: 2,
       },
       {
         question: 'In welchen Städten war Johanna mit<br><br>1) drei bzw. vier Jahren<br>2) mit 13 Jahren<br>3) mit 20 Jahren<br>4) mit 24 Jahren?',
@@ -160,7 +160,7 @@ const store = new Vuex.Store({
       {
         question: 'Welche Adresse hatten Johanna und Phillipp in Enschede?',
         answer: 'Tollenstraat 5',
-        points: 1,
+        points: 2,
       },
       {
         question: 'Wo haben sich Johanna und Phillipp verlobt?<br><br>A) Auf einem Schiff in Österreich<br>B) Auf einem Berg in Italien<br>C) An einem Strand in Portugal<br>D) Auf einer Insel in Griechenland',
