@@ -10,7 +10,7 @@
       <p>
         § 1. Die Gesamtanzahl der Punkte beträgt 30 (= Johannas Alter).<br>
         § 2. Johanna muss das Quiz co-moderieren, sprich durch die Webseite klicken und die Fragen stellen.<br>
-        § 3. Jedes Team darf ein Mal den "Johanna-Joker" benutzen, mit dem sie Johannas Hilfe in Anspruch nehmen darf.<br>
+        § 3. Jedes Team darf ein Mal den "Johanna-Joker" benutzen, mit dem es Johannas Hilfe in Anspruch nehmen darf.<br>
         § 4. Mehrere Teams können bei einer Frage den Joker in Anspruch nehmen.<br>
         § 5. Der Joker kann nur in Anspruch genommen werden, nachdem das Team in einem österreichischen Dialekt ihrer Wahl die Worte "Hilf mir bitte" gerufen hat.
       </p>
