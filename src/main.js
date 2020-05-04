@@ -11,6 +11,7 @@ import FourOhFour from './views/FourOhFour.vue';
 import Home from './views/Home.vue';
 import Questions from './views/Questions.vue';
 import Results from './views/Results.vue';
+import Rules from './views/Rules.vue';
 import Teams from './views/Teams.vue';
 import Thanks from './views/Thanks.vue';
 
@@ -48,6 +49,11 @@ const router = new VueRouter({
       path: '/ergebnisse',
       name: 'results',
       component: Results,
+    },
+    {
+      path: '/regeln',
+      name: 'rules',
+      component: Rules,
     },
     {
       path: '/teams',

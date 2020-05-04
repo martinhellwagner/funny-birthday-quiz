@@ -82,6 +82,11 @@ a:visited {
     max-width: 800px;
   }
 
+  &--smallFont {
+    font-size: 32px;
+    line-height: 2;
+  }
+
   &--largeFont {
     font-size: 48px;
     line-height: 2;
