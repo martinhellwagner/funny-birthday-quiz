@@ -75,22 +75,17 @@ const router = new VueRouter({
 const store = new Vuex.Store({
   state: {
     attendees: [
-      'Name 1',
-      'Hilde',
-      'Name 2',
+      'Agnes',
+      'Anna',
       'Jasmin',
-      'Name 3',
-      'Johanna',
-      'Name 4',
-      'Martin',
-      'Name 5',
+      'Leni',
+      'Matyas',
+      'Paze',
       'Phillipp',
-      'Name 6',
       'Stavros',
-      'Name 7',
     ],
 
-    numberOfTeams: 4,
+    numberOfTeams: 3,
 
     teams: [
       // Empty at the beginning
