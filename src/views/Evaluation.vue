@@ -9,9 +9,10 @@
     </div>
 
     <div class="buttons">
-      <!-- eslint-disable-next-line max-len -->
+      <!-- eslint-disable max-len -->
       <router-link :to="{ name: 'answers' }"><button class="button button--green button--rotateCounterClockwise">Antworten, hop hop hop!</button></router-link>
       <router-link :to="{ name: 'questions' }"><button class="button button--red button--rotateClockwise">Nochmal die Fragen bitte.</button></router-link>
+      <!-- eslint-enable max-len -->
     </div>
   </div>
 </template>
