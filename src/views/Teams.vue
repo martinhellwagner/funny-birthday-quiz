@@ -18,7 +18,7 @@
       <div key="step2" v-if="step === 2">
         <div class="description">
           <span>Every day I'm shuffling...</span><br>
-          <div>
+          <div style="height: 189px;">
             <img src="../images/system/shuffling.gif">
           </div>
         </div>
@@ -43,7 +43,7 @@
       <div key="step2" v-if="step === 4">
         <div class="description">
           <span>Ich verinnerliche die Namen...</span><br>
-          <div>
+          <div style="height: 180px;">
             <img src="../images/system/writing.gif">
           </div>
         </div>
