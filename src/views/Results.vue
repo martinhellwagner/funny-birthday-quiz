@@ -5,6 +5,12 @@
       <!-- eslint-disable max-len -->
       <transition name="transition" mode="out-in" appear v-on:enter="enter" v-on:leave="leave" v-bind:css="false">
         <div class="container-inner" key="step1" v-if="step === 1">
+          <p>
+            Wir haben ein bisschen geschwindelt.<br>
+            Alle Fragen zusammen haben nur 29 Punkte ergeben.<br>
+            Der letzte Punkt geht an das Team, dessen Namen Johanna am besten findet.
+          </p>
+
           <div class="teams teams--bottom description">
             <div class="team description" v-for="(team, index) in teams" :key="index">
               <p><b>{{ team.name }} </b></p>
