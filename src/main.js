@@ -97,6 +97,11 @@ const store = new Vuex.Store({
 
     quizPool: [
       {
+        question: 'Welche der folgenden Intro-Lieder von beliebten Anime-Serien ist immer noch einer von Johannas Lieblingssongs?<br><br>a) Mila Superstar<br>b) Heidi<br>c) Sailor Moon<br>d) Pokémon',
+        answer: 'c) Sailor Moon',
+        points: 1,
+      },
+      {
         question: 'Aus welchen beiden Tieren schuf Johanna ein neues Wort, das bis dato unbekannt, aber entzückend war?',
         answer: 'Aus Katze und Zebra entstand "zebra cat", es war der Tiger.',
         points: 2,
@@ -107,8 +112,23 @@ const store = new Vuex.Store({
         points: 4,
       },
       {
-        question: 'Johanna hat viele Leibspeisen. Eine davon nimmt aber einen besonderen Platz in ihrem Herzen ein. Welche?<br><br>A) Gulasch<br>B) Lasagne<br>C) Risotto<br>D) Garnelen mit Knoblauch',
-        answer: 'C) Risotto',
+        question: 'Aus welchen beiden Tieren schuf Johanna ein neues Wort, das bis dato unbekannt, aber entzückend war?',
+        answer: 'Aus Katze und Zebra entstand "zebra cat", es war der Tiger.',
+        points: 1,
+      },
+      {
+        question: 'Johanna hat sich in der Schulzeit - so wie die meisten Teenie-Girls - genau ein Mal eine Haarsträhne gefärbt. Welche Farbe hatte diese Haarsträhne?<br><br>a) blond<br>b) rot<br>c) blau<br>d) grün',
+        answer: 'b) rot',
+        points: 1,
+      },
+      {
+        question: 'In ihren wilden Jahren hatte Johanna ein Faible für sogenannte Indie-Rock-Bands. Welche dieser typischen Gruppen aus diesem Genre findet sie überschätzt?<br><br>a) The Killers<br>b) Arctic Monkeys<br>c) Mando Diao<br>d) Franz Ferdinand',
+        answer: 'd) Franz Ferdinand',
+        points: 1,
+      },
+      {
+        question: 'Johanna war in ihren Teenager-Jahren abhängig nach eigenen Angaben abhängig von einem Online-Rollenspiel. Was war der Name dieses Videospiels?<br><br>a) Everquest<br>b) RuneScape<br>c) Ragnarok Online<br>d) World of Warcraft',
+        answer: 'c) Ragnarok Online',
         points: 1,
       },
       {
@@ -117,29 +137,29 @@ const store = new Vuex.Store({
         points: 1,
       },
       {
-        question: 'Mit welchem Unternehmen hat Johanna ihre Maturareise gebucht?',
-        answer: 'Mission2beach',
-        points: 1,
-      },
-      {
         question: '1) Was war Hildes Geschenk zu Johannas Matura, das den ganzen Tag versteckt war?<br>2) Aus welcher Stadt kam es?<br>3) Warum war Hilde an diesem Tag nicht zu Hause?<br>4) Wo war sie?',
         answer: '1) Ohrringe<br>2) Las Vegas<br>3) Fortbildung mit den Schuldirektorinnen und -inspektorinnen<br>4) Mistelbach, NÖ',
         points: 4,
       },
       {
-        question: 'Johanna spricht gerne Spanisch. Welche andere Sprache wurde von Spanisch quasi überschrieben und fiel dieser Leidenschaft zum Opfer?<br><br>A) Ungarisch<br>B) Slowenisch<br>C) Französisch',
-        answer: 'C) Französisch',
+        question: 'Mit welchem Unternehmen hat Johanna ihre Maturareise gebucht?',
+        answer: 'Mission2beach',
         points: 1,
       },
       {
-        question: 'Johanna ist zur einer Party eingeladen, das Thema ist "Game of Thrones". Welches Kostüm wird sie wählen?<br><br>A) Kahleesi<br>B) Sansa<br>C) Cersei<br>D) Melisandre',
-        answer: 'A) Kahleesi',
+        question: 'Johanna spricht gerne Spanisch. Welche andere Sprache wurde von Spanisch quasi überschrieben und fiel dieser Leidenschaft zum Opfer?<br><br>a) Ungarisch<br>b) Slowenisch<br>c) Französisch',
+        answer: 'c) Französisch',
+        points: 1,
+      },
+      {
+        question: 'Johanna ist zur einer Party eingeladen, das Thema ist "Game of Thrones". Welches Kostüm wird sie wählen?<br><br>a) Kahleesi<br>b) Sansa<br>c) Cersei<br>d) Melisandre',
+        answer: 'a) Kahleesi',
         points: 1,
         image: '001.png',
       },
       {
-        question: 'Johanna hat fast alle Kontinente bereist. Welcher fehlt ihr noch?<br><br>A) Südamerika<br>B) Asien<br>C) Afrika<br>D) Australien',
-        answer: 'D) Australien',
+        question: 'Johanna hat fast alle Kontinente bereist. Welcher fehlt ihr noch?<br><br>a) Südamerika<br>b) Asien<br>c) Afrika<br>d) Australien',
+        answer: 'd) Australien',
         points: 1,
       },
       {
@@ -153,8 +173,8 @@ const store = new Vuex.Store({
         points: 2,
       },
       {
-        question: 'Wie heisst Johannas Lieblingsbuch?<br><br>A) Sleeping Chinese<br>B) Beautiful Goats<br>C) Gerichte mit Mett',
-        answer: 'B) Beautiful Goats',
+        question: 'Wie heisst Johannas Lieblingsbuch?<br><br>a) Sleeping Chinese<br>b) Beautiful Goats<br>c) Gerichte mit Mett',
+        answer: 'b) Beautiful Goats',
         points: 1,
         image: '002.png',
       },
@@ -164,19 +184,24 @@ const store = new Vuex.Store({
         points: 2,
       },
       {
-        question: 'Wo haben sich Johanna und Phillipp verlobt?<br><br>A) Auf einem Schiff in Österreich<br>B) Auf einem Berg in Italien<br>C) An einem Strand in Portugal<br>D) Auf einer Insel in Griechenland',
-        answer: 'C) An einem Strand in Portugal',
+        question: 'Wo haben sich Johanna und Phillipp verlobt?<br><br>a) Auf einem Schiff in Österreich<br>b) Auf einem Berg in Italien<br>c) An einem Strand in Portugal<br>d) Auf einer Insel in Griechenland',
+        answer: 'c) An einem Strand in Portugal',
         points: 1,
         image: '003.png',
       },
       {
-        question: 'Johanna arbeitet in der Sprachwissenschaft. Was ist ihr Fachgebiet?<br><br>A) Phonetik<br>B) Lexik<br>C) Pragmatik',
-        answer: 'C) Pragmatik',
+        question: 'Johanna arbeitet in der Sprachwissenschaft. Was ist ihr Fachgebiet?<br><br>a) Phonetik<br>b) Lexik<br>c) Pragmatik',
+        answer: 'c) Pragmatik',
         points: 1,
       },
       {
-        question: 'Johanna liebt Babytiere. Welches Babytier hat sie am liebsten?<br><br>A) Babyzebresel<br>B) Babyozelot<br>C) Babykoala<br>D) Babyfaultier',
+        question: 'Johanna liebt Babytiere. Welches Babytier hat sie am liebsten?<br><br>a) Babyzebresel<br>b) Babyozelot<br>c) Babykoala<br>d) Babyfaultier',
         answer: 'Alle Antworten sind natürlich richtig.',
+        points: 1,
+      },
+      {
+        question: 'Welches der folgenden exotischen Tiere findet Johanna am <i>wenigsten</i> niedlich?<br><br>a) Tarsier<br>b) Lamas<br>c) Lemuren<br>d) Alpakas',
+        answer: 'a) Tarsier',
         points: 1,
       },
     ],
