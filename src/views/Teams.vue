@@ -2,8 +2,8 @@
 <template>
   <div class="container">
     <!-- eslint-disable max-len -->
-    <transition name="transition" mode="out-in" appear v-on:enter="enter" v-on:leave="leave">
-      <div key="step1" v-if="step === 1">
+    <transition name="transition" mode="out-in" appear v-on:enter="enter" v-on:leave="leave" v-bind:css="false">
+      <div class="container-inner" key="step1" v-if="step === 1">
         <div class="attendees description">
           <div class="attendee" v-for="(attendee, index) in attendees" :key="index">
             {{ attendee }}
@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <div key="step2" v-if="step === 2">
+      <div class="container-inner" key="step2" v-if="step === 2">
         <div class="description">
           <span>Every day I'm shuffling...</span><br>
           <div>
@@ -24,7 +24,7 @@
         </div>
       </div>
 
-      <div key="step3" v-if="step === 3">
+      <div class="container-inner" key="step3" v-if="step === 3">
         <div class="teams description">
           <div class="team description" v-for="(team, index) in teams" :key="index">
             <input type="text" class="input">
@@ -40,7 +40,7 @@
         </div>
       </div>
 
-      <div key="step2" v-if="step === 4">
+      <div class="container-inner" key="step4" v-if="step === 4">
         <div class="description">
           <span>Ich verinnerliche die Namen...</span><br>
           <div>
@@ -49,7 +49,7 @@
         </div>
       </div>
 
-      <div key="step5" v-if="step === 5">
+      <div class="container-inner" key="step5" v-if="step === 5">
         <div class="teams description">
           <div class="team description" v-for="(team, index) in teams" :key="index">
             <p><b>{{ team.name }} </b></p>

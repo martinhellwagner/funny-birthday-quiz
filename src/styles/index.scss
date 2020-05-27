@@ -21,17 +21,6 @@ $breakpoint-max: 1200;
   }
 }
 
-// TRANSITIONS
-.transition-enter-active,
-.transition-leave-active {
-  transition: opacity 300ms linear; // Note that the same value needs to be set in Javascript
-}
-
-.transition-enter,
-.transition-leave-to {
-  opacity: 0;
-}
-
 // STYLES – GENERAL
 body {
   width: 100vw;
@@ -50,8 +39,14 @@ body {
   position: relative;
   min-height: var(--windowHeight);
   width: 100%;
+}
 
-  &--ready {
+.container,
+.container-inner {
+  opacity: 0;
+  transition: opacity 300ms linear; // Note that the same value needs to be set in Javascript
+
+  &.container--ready {
     opacity: 1;
   }
 }

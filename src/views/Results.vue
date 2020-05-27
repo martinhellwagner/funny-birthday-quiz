@@ -3,8 +3,8 @@
   <div class="container">
     <div class="description">
       <!-- eslint-disable max-len -->
-      <transition name="transition" mode="out-in" appear v-on:enter="enter" v-on:leave="leave">
-        <div key="step1" v-if="step === 1">
+      <transition name="transition" mode="out-in" appear v-on:enter="enter" v-on:leave="leave" v-bind:css="false">
+        <div class="container-inner" key="step1" v-if="step === 1">
           <div class="teams teams--bottom description">
             <div class="team description" v-for="(team, index) in teams" :key="index">
               <p><b>{{ team.name }} </b></p>
@@ -17,7 +17,7 @@
           </div>
         </div>
 
-        <div key="step2" v-if="step === 2">
+        <div class="container-inner" key="step2" v-if="step === 2">
           <div class="description">
             <span>Spannung, Spannung!</span><br>
             <div>
@@ -26,7 +26,7 @@
           </div>
         </div>
 
-        <div key="step3" v-if="step === 3">
+        <div class="container-inner" key="step3" v-if="step === 3">
           <div class="winningTeams description">
             <div>
               <img src="../images/system/partying.png">

@@ -2,8 +2,8 @@
 <template>
   <div class="container">
     <!-- eslint-disable max-len -->
-    <transition name="transition" mode="out-in" appear v-on:enter="enter" v-on:leave="leave">
-      <div :key="questionIndex">
+    <transition name="transition" mode="out-in" appear v-on:enter="enter" v-on:leave="leave" v-bind:css="false">
+      <div class="container-inner" :key="questionIndex">
         <div class="question description">
           <p>
             <b>Frage {{ questionIndex }}</b><br>
