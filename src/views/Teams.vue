@@ -2,7 +2,7 @@
 <template>
   <div class="container">
     <!-- eslint-disable max-len -->
-    <transition name="transition" mode="out-in">
+    <transition name="transition" mode="out-in" appear v-on:enter="enter" v-on:leave="leave">
       <div key="step1" v-if="step === 1">
         <div class="attendees description">
           <div class="attendee" v-for="(attendee, index) in attendees" :key="index">
