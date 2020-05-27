@@ -46,7 +46,7 @@
 
           <div class="buttons">
             <router-link :to="{ name: 'thanks' }"><button class="button button--green button--jumpHorizontal">Das war toll!</button></router-link>
-            <router-link :to="{ name: 'thanks' }"><button class="button button--red button button--jumpVertical">Endlich aus!</button></router-link>
+            <router-link :to="{ name: 'thanks' }"><button class="button button--red button--jumpVertical">Endlich aus!</button></router-link>
           </div>
         </div>
       </transition>
