@@ -7,6 +7,7 @@ import Mixins from './scripts/index';
 import App from './App.vue';
 
 import Answers from './views/Answers.vue';
+import Evaluation from './views/Evaluation.vue';
 import FourOhFour from './views/FourOhFour.vue';
 import Home from './views/Home.vue';
 import Questions from './views/Questions.vue';
@@ -34,6 +35,11 @@ const router = new VueRouter({
       path: '/antworten',
       name: 'answers',
       component: Answers,
+    },
+    {
+      path: '/auswertung',
+      name: 'evaluation',
+      component: Evaluation,
     },
     {
       path: '/sicha-ned',

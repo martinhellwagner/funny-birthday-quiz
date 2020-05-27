@@ -14,8 +14,7 @@
 
         <div class="buttons">
           <button class="button button--green button--scaleSmall" @click="goToNextQuestion" v-if="questionIndex < numberOfQuestions">Weiter zur nächsten Frage</button>
-          <router-link :to="{ name: 'answers' }" v-if="questionIndex == numberOfQuestions"><button class="button button--green button--rotateCounterClockwise">Antworten, hop hop hop!</button></router-link>
-          <router-link :to="{ name: 'questions' }"><button class="button button--red button--jumpVertical" v-if="questionIndex == numberOfQuestions">Please kill me now.</button></router-link>
+          <router-link :to="{ name: 'answers' }" v-if="questionIndex == numberOfQuestions"><button class="button button--green button--rotateCounterClockwise">Neeeeeext!</button></router-link>
         </div>
       </div>
     </transition>
