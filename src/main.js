@@ -112,13 +112,13 @@ const store = new Vuex.Store({
         points: 4,
       },
       {
-        question: 'Aus welchen beiden Tieren schuf Johanna ein neues Wort, das bis dato unbekannt, aber entzückend war?',
-        answer: 'Aus Katze und Zebra entstand "zebra cat", es war der Tiger.',
+        question: 'Johanna war in ihren Teenager-Jahren abhängig nach eigenen Angaben abhängig von einem Online-Rollenspiel. Was war der Name dieses Videospiels?<br><br>a) Everquest<br>b) RuneScape<br>c) Ragnarok Online<br>d) World of Warcraft',
+        answer: 'c) Ragnarok Online',
         points: 1,
       },
       {
-        question: 'Johanna hat sich in der Schulzeit - so wie die meisten Teenie-Girls - genau ein Mal eine Haarsträhne gefärbt. Welche Farbe hatte diese Haarsträhne?<br><br>a) blond<br>b) rot<br>c) blau<br>d) grün',
-        answer: 'b) rot',
+        question: 'Welchen Buchstaben hatte Johannas Oberstufen-Klasse?',
+        answer: 'A',
         points: 1,
       },
       {
@@ -127,13 +127,8 @@ const store = new Vuex.Store({
         points: 1,
       },
       {
-        question: 'Johanna war in ihren Teenager-Jahren abhängig nach eigenen Angaben abhängig von einem Online-Rollenspiel. Was war der Name dieses Videospiels?<br><br>a) Everquest<br>b) RuneScape<br>c) Ragnarok Online<br>d) World of Warcraft',
-        answer: 'c) Ragnarok Online',
-        points: 1,
-      },
-      {
-        question: 'Welchen Buchstaben hatte Johannas Oberstufen-Klasse?',
-        answer: 'A',
+        question: 'Johanna hat sich in der Schulzeit – so wie die meisten Teenie-Girls – genau ein Mal eine Haarsträhne gefärbt. Welche Farbe hatte diese Haarsträhne?<br><br>a) blond<br>b) rot<br>c) blau<br>d) grün',
+        answer: 'b) rot',
         points: 1,
       },
       {
