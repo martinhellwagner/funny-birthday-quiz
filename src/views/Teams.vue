@@ -146,7 +146,7 @@ export default {
 
       setTimeout(() => {
         this.step = 3;
-      }, 2000);
+      }, 5000);
     },
 
     nameTeams() {
@@ -171,7 +171,7 @@ export default {
 
         setTimeout(() => {
           this.step = 5;
-        }, 2000);
+        }, 5000);
       }
     },
   },

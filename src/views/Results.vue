@@ -106,7 +106,7 @@ export default {
 
         setTimeout(() => {
           this.step = 3;
-        }, 1700);
+        }, 5000);
       }
     },
   },
