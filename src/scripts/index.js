@@ -17,13 +17,12 @@ export default {
 
     // Enter page through transition
     enter(container, done) {
-      setTimeout(() => {
+      this.checkImagesLoaded(container, () => {
         container.classList.add('container--ready');
-      }, 100);
-
-      setTimeout(() => {
-        done();
-      }, 300);
+        setTimeout(() => {
+          done();
+        }, 300);
+      });
     },
 
     // Leave page through transition
@@ -32,6 +31,29 @@ export default {
       setTimeout(() => {
         done();
       }, 300);
+    },
+
+    // Check if images are loaded
+    checkImagesLoaded(container, loaded) {
+      const images = container.getElementsByTagName('img');
+      let imagesToLoad = images.length;
+
+      for (let i = 0; i < images.length; i += 1) {
+        if (images[i].complete) {
+          imagesToLoad -= 1;
+        } else {
+          // eslint-disable-next-line
+          images[i].addEventListener('load', () => {
+            imagesToLoad -= 1;
+            if (imagesToLoad === 0) {
+              loaded();
+            }
+          });
+        }
+        if (imagesToLoad === 0) {
+          loaded();
+        }
+      }
     },
 
     // Workaround for inconsistent height of mobile browsers
