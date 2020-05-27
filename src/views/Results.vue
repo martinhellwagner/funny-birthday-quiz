@@ -20,7 +20,7 @@
         <div key="step2" v-if="step === 2">
           <div class="description">
             <span>Spannung, Spannung!</span><br>
-            <div style="height: 275px;">
+            <div>
               <img src="../images/system/winning.gif">
             </div>
           </div>

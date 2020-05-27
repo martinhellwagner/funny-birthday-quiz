@@ -18,8 +18,10 @@ export default {
     // Enter page through transition
     enter(container, done) {
       this.checkImagesLoaded(container, () => {
+        console.log('DONE 1');
         container.classList.add('container--ready');
         setTimeout(() => {
+          console.log('DONE 2');
           done();
         }, 300);
       });
@@ -46,11 +48,13 @@ export default {
           images[i].addEventListener('load', () => {
             imagesToLoad -= 1;
             if (imagesToLoad === 0) {
+              console.log('LOADED');
               loaded();
             }
           });
         }
         if (imagesToLoad === 0) {
+          console.log('LOADED');
           loaded();
         }
       }
