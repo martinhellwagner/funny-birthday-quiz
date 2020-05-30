@@ -94,7 +94,7 @@ const store = new Vuex.Store({
       'Stavros',
     ],
 
-    numberOfTeams: 4,
+    numberOfTeams: 3,
 
     teams: [
       // Empty at the beginning
