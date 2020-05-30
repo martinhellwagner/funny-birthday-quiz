@@ -82,6 +82,7 @@ const store = new Vuex.Store({
   state: {
     attendees: [
       'Agnes',
+      'Angie',
       'Anna',
       'Jasmin',
       'Leni',
